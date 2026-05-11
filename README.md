@@ -90,21 +90,6 @@ A full-featured embedded clock system built in C for the ATMEGA32 microcontrolle
 
 This project was developed using **Eclipse IDE for C/C++ Developers** with the **AVR Eclipse Plugin** (`de.innot.avreclipse`) and the **WinAVR toolchain** (AVR-GCC on Windows).
 
-### What you need to install
-
-1. **Eclipse IDE for C/C++ Developers**
-   Download from: https://www.eclipse.org/downloads/
-
-2. **AVR Eclipse Plugin**
-   In Eclipse: `Help → Install New Software`
-   Add site: `http://avr-eclipse.sourceforge.net/updatesite/`
-   Install: *AVR Eclipse Plugin*
-
-3. **WinAVR** (Windows) — includes avr-gcc and avrdude
-   Download from: https://winavr.sourceforge.net/
-
-   > On Linux/macOS, install `avr-gcc`, `avr-libc`, and `avrdude` via your package manager instead.
-
 ### Opening the project in Eclipse
 
 1. Clone or download this repository
