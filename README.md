@@ -1,6 +1,6 @@
 # Real-Time Clock (RTC) — DS1307 + ATMEGA32
 
-A full-featured embedded clock system built in C for the ATMEGA32 microcontroller. Displays live time and date on a 16×2 LCD, with alarm, stopwatch, and countdown timer functionality controlled via a 4×4 keypad and dedicated push buttons.
+A full-featured embedded clock system built in C for the ATMEGA32 microcontroller. Displays live time and date on an LCD, with alarm, stopwatch, and countdown timer functionality controlled via a keypad and dedicated push buttons.
 
 ---
 
