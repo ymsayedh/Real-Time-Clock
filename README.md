@@ -116,21 +116,6 @@ This project was developed using **Eclipse IDE for C/C++ Developers** with the *
 5. Build: `Project → Build Project` (or `Ctrl+B`)
 6. Flash: `AVR → Upload Project to Target Device` (requires AVRDude + programmer)
 
-### Flashing without Eclipse (command line)
-
-```bash
-# Compile
-avr-gcc -mmcu=atmega32 -DF_CPU=8000000UL -Os \
-  main.c rtc.c i2c.c lcd.c keypad.c timer.c dio.c \
-  -o clock.elf
-
-# Convert to HEX
-avr-objcopy -O ihex clock.elf clock.hex
-
-# Flash (replace /dev/ttyUSB0 and usbasp with your programmer)
-avrdude -c usbasp -p atmega32 -U flash:w:clock.hex
-```
-
 ---
 
 ## How to Use
@@ -203,12 +188,3 @@ The display refreshes every second.
 
 ### Exit any mode (PD3 button)
 Press **Exit Mode** (PD3) at any point inside Stopwatch or Countdown modes to immediately return to the default clock display.
-
----
-
-## Notes
-
-- The DS1307 uses BCD encoding internally; all conversion is handled by `BCD_to_Dec` / `Dec_to_BCD` in `rtc.c`
-- The countdown timer uses **Timer1 in CTC mode** with a 1-second ISR interrupt, so it is independent of the main loop delay
-- The keypad uses active-low scanning with pull-ups on PORTA; keys are debounced by waiting for release + 200ms delay
-- All buttons use internal pull-ups and are active LOW (pressed = 0)
